@@ -4,7 +4,8 @@ function formatMessage(username, text) {
   return {
     username,
     text,
-    time: moment().format('h:mm a'),
+    // Adding 2 hours to server to get local time
+    time: moment().add(2, 'h').format('h:mm a'),
   };
 }
 
